@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team - Office Theme</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #e8ecf3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+    }
+
+    .table {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .member {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .member img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .member .badge {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .member:hover {
+      z-index: 2;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .member:hover .badge {
+      opacity: 1;
+    }
+
+    .top {
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .bottom {
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .left {
+      left: 5%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .right {
+      right: 5%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .top-left {
+      top: 15%;
+      left: 15%;
+    }
+
+    .top-right {
+      top: 15%;
+      right: 15%;
+    }
+
+    .bottom-left {
+      bottom: 15%;
+      left: 15%;
+    }
+
+    .bottom-right {
+      bottom: 15%;
+      right: 15%;
+    }
+
+    .top:hover {
+      transform: translate(-50%, -20px) scale(1.1);
+    }
+
+    .bottom:hover {
+      transform: translate(-50%, 20px) scale(1.1);
+    }
+
+    .left:hover {
+      transform: translate(-20px, -50%) scale(1.1);
+    }
+
+    .right:hover {
+      transform: translate(20px, -50%) scale(1.1);
+    }
+
+    .top-left:hover {
+      transform: translate(-10px, -10px) scale(1.1);
+    }
+
+    .top-right:hover {
+      transform: translate(10px, -10px) scale(1.1);
+    }
+
+    .bottom-left:hover {
+      transform: translate(-10px, 10px) scale(1.1);
+    }
+
+    .bottom-right:hover {
+      transform: translate(10px, 10px) scale(1.1);
+    }
+
+    @media (max-width: 700px) {
+      .team-container {
+        width: 100%;
+        height: 100%;
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="team-container">
+    <div class="table"></div>
+    <div class="member top">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 1" />
+      <div class="badge">Alice - CEO</div>
+    </div>
+    <div class="member bottom">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 2" />
+      <div class="badge">Bob - CTO</div>
+    </div>
+    <div class="member left">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 3" />
+      <div class="badge">Chloe - Designer</div>
+    </div>
+    <div class="member right">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 4" />
+      <div class="badge">David - Dev</div>
+    </div>
+    <div class="member top-left">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 5" />
+      <div class="badge">Eva - Marketing</div>
+    </div>
+    <div class="member top-right">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 6" />
+      <div class="badge">Finn - Product</div>
+    </div>
+    <div class="member bottom-left">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 7" />
+      <div class="badge">Grace - HR</div>
+    </div>
+    <div class="member bottom-right">
+      <img src="pexels-ketut-subiyanto-4584045.jpg" alt="Member 8" />
+      <div class="badge">Hank - QA</div>
+    </div>
+  </div>
+</body>
+</html>
